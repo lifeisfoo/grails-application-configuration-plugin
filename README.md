@@ -1,5 +1,5 @@
-# Application Settings plugin for Grails
-Avoid to create again a Conf controller to get/put key->value runtime application configuration information.
+# Application Configuration plugin for Grails
+Avoid to create again a Conf class to get/put key->value runtime application configuration information.
 
 ## Usage
 ### Import
@@ -14,7 +14,7 @@ After the plugin was installed a Conf class will be available to store and retri
 Conf.valuePut("header","Welcome to this company website!")
 def websiteHeader = Conf.valueGet("header")
 ```
-You can store integer, dubles, etc and converting them after get. Also objects in json format...everything you want.
+You can store integer, duble, etc and converting them after get. Also objects in json format...everything you want.
 
 ## Future
 * Caching level

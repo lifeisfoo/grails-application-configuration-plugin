@@ -1,4 +1,4 @@
-class ApplicationSettingsGrailsPlugin {
+class ApplicationConfigurationGrailsPlugin {
     // the plugin version
     def version = "0.1"
     // the version or versions of Grails the plugin is designed for
@@ -8,16 +8,15 @@ class ApplicationSettingsGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
-    // TODO Fill in these fields
-    def title = "Application Settings Plugin" // Headline display name of the plugin
+    def title = "Application Configuration Plugin" // Headline display name of the plugin
     def author = "Alessandro Miliucci"
     def authorEmail = "lifeisfoo@gmail.com"
     def description = '''\
-Grails plugin that expose a Conf controller to get/set string values based on string keys: Conf.valueGet("website-header").
+Grails plugin that expose a Conf class to get/set string values based on string keys: Conf.valueGet("website-header").
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/application-settings"
+    def documentation = "https://github.com/lifeisfoo/grails-application-configuration-plugin"
 
     // Extra (optional) plugin metadata
 
