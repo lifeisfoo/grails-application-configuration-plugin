@@ -1,38 +1,20 @@
 package net.forkwait
 
+import grails.test.mixin.TestFor
 
-
-import grails.test.mixin.*
-import org.junit.*
-
-/**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
- */
 @TestFor(Conf)
 class ConfTests {
 
-    void testPut() {
-    	if(Conf.valuePut("key","value")){
+	void testPut() {
+		assert Conf.valuePut("key","value"), "Simple put failed"
+	}
 
-    	}else{
-       		fail "Simple put failed"
-       	}
-    }
+	void testGet() {
+		Conf.valuePut("get","value")
+		assert Conf.valueGet("get"), "Simple get failed"
+	}
 
-    void testGet() {
-    	Conf.valuePut("get","value")
-    	if(Conf.valueGet("get")){
-
-    	}else{
-       		fail "Simple get failed"
-       	}
-    }
-
-    void testNullGet() {
-    	if(Conf.valueGet("getnull")){
-    		fail "Not inserted value cannot exists"
-    	}else{
-       	
-       	}
-    }
+	void testNullGet() {
+		assert !Conf.valueGet("getnull"), "Not inserted value cannot exists"
+	}
 }

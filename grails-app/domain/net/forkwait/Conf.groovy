@@ -25,8 +25,8 @@ class Conf {
 		return Conf.valueGet(k) ?: value
 	}
 
-    static constraints = {
-    	ckey nullable: false, blank:false
-    	cvalue nullable: false
-    }
+	static constraints = {
+		ckey blank:false
+		cvalue()
+	}
 }
