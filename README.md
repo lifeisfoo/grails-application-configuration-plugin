@@ -14,7 +14,12 @@ After the plugin was installed a Conf class will be available to store and retri
 Conf.valuePut("header","Welcome to this company website!")
 def websiteHeader = Conf.valueGet("header")
 ```
+or
+```
+def websiteHeader = Conf.valueGet("header", "default value if isn't present")
+```
 You can store integer, duble, etc and converting them after get. Also objects in json format...everything you want.
+If the single parameter get is used and the key isn't present, null is returned. The put operation return the inserted value.
 
 ## Future
 * Caching level
